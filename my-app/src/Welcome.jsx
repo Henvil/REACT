@@ -3,6 +3,9 @@ export function Welcome({ name, age }) {
   return (
     <div>
       <h2>Welcome, {name ? name : 'Guest'} !</h2>
+      <p>
+        Your age is: <Age age={age} />
+      </p>
       {age > 18 && (
         <p>
           Your age is <Age age={age} />, greater than 18.
