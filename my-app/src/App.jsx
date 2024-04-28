@@ -1,3 +1,4 @@
+import { AlertClock } from './AlertClock';
 import { Welcome } from './Welcome';
 export function App() {
   return (
@@ -5,6 +6,7 @@ export function App() {
       <h1>Questa è un esempio di App</h1>
       <hr />
       <Welcome name="John" age={19} />
+      <AlertClock />
     </div>
   );
 }
