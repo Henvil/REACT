@@ -5,7 +5,6 @@ export function App() {
     <div>
       <h1>Questa è un esempio di App</h1>
       <hr />
-      <Welcome name="John" age={19} />
       <AlertClock />
     </div>
   );
