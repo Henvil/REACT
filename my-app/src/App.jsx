@@ -1,4 +1,4 @@
-import { AlertClock } from './AlertClock';
+import { AlertClock } from './old-components/AlertClock';
 export function App() {
   return (
     <div>
