@@ -1,10 +1,11 @@
-import { AlertClock } from './old-components/AlertClock';
+import { Counter } from './Counter';
+
 export function App() {
   return (
     <div>
       <h1>Questa è un esempio di App</h1>
       <hr />
-      <AlertClock />
+      <Counter initialValue={0} incrementAmount={1} />
     </div>
   );
 }
