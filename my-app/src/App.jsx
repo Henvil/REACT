@@ -5,7 +5,7 @@ export function App() {
     <div>
       <h1>Questa è un esempio di App</h1>
       <hr />
-      <Counter initialValue={0} incrementAmount={1} />
+      <Counter initialValue={1} incrementAmount={1} />
     </div>
   );
 }

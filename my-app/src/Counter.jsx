@@ -10,6 +10,7 @@
 
 */
 import React, { useState } from 'react';
+import { CounterDisplay } from './Counterdisplay';
 
 export function Counter({ initialValue, incrementAmount }) {
   const [counter, setCounter] = useState(initialValue);
@@ -18,10 +19,21 @@ export function Counter({ initialValue, incrementAmount }) {
     setCounter((c) => c + incrementAmount);
   }
 
+  function handleCounterDecrease() {
+    if (counter > initialValue) {
+      setCounter((c) => c - incrementAmount);
+    }
+  }
+
+  function handleCounterReset() {
+    setCounter(initialValue);
+  }
   return (
     <div>
       <button onClick={handleCounterIncrease}>Feed me!</button>
-      <h2>I'm {counter} meters tall</h2>
+      <button onClick={handleCounterDecrease}>Let me starve!</button>
+      <button onClick={handleCounterReset}>Let me be reborn!</button>
+      <CounterDisplay counter={counter} />
     </div>
   );
 }
