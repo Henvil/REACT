@@ -16,14 +16,13 @@ export function Login({ onLogin }) {
     const { name, value, type, checked } = event.target;
     setData({ ...data, [name]: type === 'checkbox' ? checked : value });
   };
-  const handleSubmit = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault();
-    console.log('Dati inviati!');
     setSubmitted(true);
     onLogin(data);
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleLogin}>
       <div>
         <input
           type="text"
@@ -54,7 +53,9 @@ export function Login({ onLogin }) {
         />
         <label htmlFor="remember">Ricordami</label>
       </div>
-      <button type="submit">Accedi</button>
+      <button type="submit" onSubmit={handleLogin}>
+        Accedi
+      </button>
       {submitted && <Welcome name={data.username} />}
     </form>
   );
