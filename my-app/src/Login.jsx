@@ -8,7 +8,7 @@ function formData() {
     remembered: false,
   };
 }
-export function Login() {
+export function Login({ onLogin }) {
   const [data, setData] = useState(formData());
   const [submitted, setSubmitted] = useState(false);
 
@@ -18,8 +18,9 @@ export function Login() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Dati inviati:', data);
+    console.log('Dati inviati!');
     setSubmitted(true);
+    onLogin(data);
   };
   return (
     <form onSubmit={handleSubmit}>
