@@ -1,4 +1,4 @@
-import { Age } from './Age';
+import { Age } from '../Age';
 export function Welcome({ name /* age */ }) {
   return (
     <div>

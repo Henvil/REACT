@@ -1,6 +1,6 @@
-import InteractiveWelcome from './InteractiveWelcome';
+import InteractiveWelcome from './old-components/InteractiveWelcome';
 import { Login } from './Login';
-import { Welcome } from './Welcome';
+import { Welcome } from './old-components/Welcome';
 
 export function App() {
   return (
