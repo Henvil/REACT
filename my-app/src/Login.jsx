@@ -18,9 +18,12 @@ export function Login({ onLogin }) {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Dati inviati!');
     setSubmitted(true);
     onLogin(data);
+  };
+  const handleReset = () => {
+    setData(formData());
+    setSubmitted(false);
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -56,6 +59,7 @@ export function Login({ onLogin }) {
       </div>
       <button type="submit">Accedi</button>
       {submitted && <Welcome name={data.username} />}
+      <button onClick={handleReset}>Cancella</button>
     </form>
   );
 }
