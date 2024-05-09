@@ -1,13 +1,12 @@
-import { UncontrolledLogin } from './UncontrolledLogin';
+import { FocusableInput } from './FocusableInput';
+import MessageRefs from './MessageRefs';
 
 export function App() {
-  const handleLogin = (userData) => {
-    console.log('Dati di accesso:', userData);
-  };
   return (
     <div>
       <h1>Questa è un esempio di App</h1>
-      <UncontrolledLogin />
+      <FocusableInput />
+      <MessageRefs />
     </div>
   );
 }

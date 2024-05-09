@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Welcome } from './old-components/Welcome';
+import { Welcome } from './Welcome';
 
 function formData() {
   return {
