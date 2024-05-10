@@ -1,14 +1,11 @@
-import Colors from './old-components/Colors';
-import MyList from './old-components/MyList';
-import Todo from './Todo';
-import { UncontrolledLogin } from './UncontrolledLogin';
+import { Welcome } from './Welcome';
 
 export function App() {
   return (
-    <div className={'app'}>
+    <div>
       <h1>Questa è un esempio di App</h1>
-      <Todo />
-      <UncontrolledLogin />
+      <h3>Esempio di Welcome component stilizzato:</h3>
+      <Welcome name={'Mario'} />
     </div>
   );
 }

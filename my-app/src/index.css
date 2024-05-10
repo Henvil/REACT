@@ -1,0 +1,11 @@
+.welcomeStyle {
+  display: flex;
+  background-color: black;
+  color: rgb(243, 255, 79);
+  width: 100px;
+  border: 5px solid rgb(243, 255, 79);
+
+  h5 {
+    text-align: center;
+  }
+}

@@ -1,7 +1,7 @@
 import { Age } from './Age';
 export function Welcome({ name /* age */ }) {
   return (
-    <div>
+    <div className="welcomeStyle">
       <h5>Benvenuto, {name ? name : 'Guest'} !</h5>
       {/*<p>
         Your age is: <Age age={age} />
