@@ -1,3 +1,5 @@
+import classes from './UncontrolledLogin.module.scss';
+
 export function UncontrolledLogin() {
   function handleFormSubmit(event) {
     event.preventDefault();
@@ -22,8 +24,10 @@ export function UncontrolledLogin() {
       <input name="username" placeholder="Nome" />
       <input name="password" placeholder="Password" type="password" />
       <input name="session" type="checkbox" />
-      <button>Login</button>
-      <button type="reset">Reset</button>
+      <button className={classes.button}>Login</button>
+      <button className={classes.button} type="reset">
+        Reset
+      </button>
     </form>
   );
 }

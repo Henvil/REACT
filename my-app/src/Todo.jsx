@@ -30,7 +30,9 @@ export default function Todo() {
         {todos.map((todo, index) => (
           <li key={index}>
             {todo}
-            <button onClick={() => removeTaskHandler(index)}>X</button>
+            <button className="button" onClick={() => removeTaskHandler(index)}>
+              X
+            </button>
           </li>
         ))}
       </ul>
