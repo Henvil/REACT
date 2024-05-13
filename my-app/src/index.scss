@@ -16,13 +16,12 @@
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
+}
 
-  h1 {
-    color: rgba(255, 104, 104, 0.655);
-  }
+.currentTime {
+  color: rgb(7, 255, 23);
+}
 
-  .button {
-    display: flex;
-    color: chocolate;
-  }
+.time {
+  color: red;
 }
