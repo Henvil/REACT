@@ -1,13 +1,13 @@
-import Colors from './old-components/Colors';
-import MyList from './old-components/MyList';
 import Todo from './Todo';
-import { UncontrolledLogin } from './UncontrolledLogin';
 import { Clock } from './Clock';
+import { Container } from './Container';
 export function App() {
   return (
     <div className={'app'}>
-      <h1>Questa è un esempio di App</h1>
-      <Clock />
+      <Container title={<h1>Questa è un esempio di App</h1>}>
+        <Clock />
+        <Todo />
+      </Container>
     </div>
   );
 }
