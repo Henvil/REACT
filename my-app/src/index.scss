@@ -1,6 +1,7 @@
 .app {
   display: flex;
   flex-direction: column;
+  width: 50%;
   padding: 20px;
   margin: 20px;
   font-family:
@@ -15,6 +16,16 @@
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
+}
+
+button {
+  margin-bottom: 20px;
+  width: 100px;
+}
+
+.button {
+  width: 20px;
+  margin-left: 20px;
 }
 
 .currentTime {
@@ -35,4 +46,14 @@
   border: 5px solid darkred;
   margin: auto;
   width: 40%;
+}
+
+.gitCard {
+  border: 5px solid darkred;
+  display: flex;
+}
+
+.gitContentCard {
+  color: darkred;
+  margin-left: 15%;
 }
