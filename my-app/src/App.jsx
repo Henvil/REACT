@@ -4,8 +4,7 @@ import { Container } from './Container';
 import { LanguageContext } from './LanguageContext';
 import { useState } from 'react';
 import { HelloWorld } from './HelloWorld';
-import { GithubUser } from './GitHubUser';
-import { GitHubForm } from './GitHubForm';
+import GithubUser from './GitHubUser';
 
 export function App() {
   const [language, setLanguage] = useState('en');
@@ -18,7 +17,6 @@ export function App() {
       <button onClick={() => handleSetLanguage('it')}>Italiano</button>
       <button onClick={() => handleSetLanguage('en')}>Inglese</button>
       <GithubUser username={'Henvil'} />
-      <GitHubForm />
       <LanguageContext.Provider value={language}>
         <HelloWorld />
         <Container title={<h1>Questa è un esempio di App</h1>}>

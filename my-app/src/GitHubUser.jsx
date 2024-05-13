@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export function GithubUser({ username }) {
+function GithubUser({ username }) {
   const [data, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
+    setError(null);
+
     fetch(`https://api.github.com/users/${username}`)
       .then((res) => res.json())
       .then((json) => setUser(json))
@@ -18,7 +20,7 @@ export function GithubUser({ username }) {
     <div className="gitCard">
       {data && (
         <>
-          <img src={data.avatar_url} />
+          <img src={data.avatar_url} alt="User avatar" />
           <div className="gitContentCard">
             <h3>{data.login}</h3>
             <div>{data.name}</div>
@@ -30,3 +32,5 @@ export function GithubUser({ username }) {
     </div>
   );
 }
+
+export default GithubUser;
