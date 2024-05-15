@@ -1,20 +1,14 @@
 import { useState } from 'react';
-
+import HookCounter from './HookCounter';
 import { GitHubUser } from './GitHubUser';
-import { GitFetchSearch } from './GitFetchSearch';
 
 export function App() {
-  const [language, setLanguage] = useState('en');
-
-  function handleSetLanguage(language) {
-    setLanguage(language);
-  }
   return (
     <div className={'app'}>
-      <button onClick={() => handleSetLanguage('it')}>Italiano</button>
-      <button onClick={() => handleSetLanguage('en')}>Inglese</button>
-      <GitHubUser username={'Henvil'} />
-      <GitFetchSearch />
+      <h1>Il nome della mia app</h1>
+      <HookCounter />
+      <GitHubUser username="Henvil" />
+      <GitHubUser username="gianmarcotoso" />
     </div>
   );
 }

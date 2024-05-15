@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GitHubUser } from './GitHubUser';
+import { GitHubUser } from '../GitHubUser';
 
 export function GitFetchSearch() {
   const [searchQuery, setSearchQuery] = useState('');

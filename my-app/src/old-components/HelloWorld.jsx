@@ -1,11 +1,7 @@
-import { useEffect } from 'react';
-import { Message } from './Message';
+import { useContext } from 'react';
+import { LanguageContext } from './LanguageContext';
 
 export function HelloWorld() {
-  return (
-    <div>
-      <h2>Hello World!</h2>
-      <Message />
-    </div>
-  );
+  const language = useContext(LanguageContext);
+  return <h2>{language === 'en' ? 'Hello, World!' : 'Ciao, mondo!'}</h2>;
 }
